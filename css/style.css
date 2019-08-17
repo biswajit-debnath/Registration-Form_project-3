@@ -2,6 +2,8 @@ body * {
     display: block;
     margin-left: 0;
     margin-right: 0;
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
 }
 fieldset {
     border: none;
@@ -15,29 +17,38 @@ input[type="checkbox"],
 input[type="radio"] + label,
 input[type="radio"] {
     display: inline;
+    margin-bottom: 0.8rem;
 }
 .info-container,
 main,
 footer {
     width:90%;
     margin: auto;
+    color:rgba(18, 21, 26, 0.809);
+}
+label,p {
+    color:rgba(27, 29, 36, 0.555);
+    font-size: .8rem;
+    letter-spacing: .8px;
+    
 }
 .intro,
 footer,
 .info-container {
     text-align: center;
 }
-
-header,
-form,
-footer {
-    
+h1 {
+    font-size: 1.3rem;
+}
+h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /*Header*/
 .intro {
     color:white;
-    background-color: black;
+    background-color:rgba(5, 13, 29, 0.884);
     padding:1.4rem 0;
 }
 .info-container {
@@ -60,46 +71,92 @@ fieldset h2 {
 label {
     margin:.7rem 0;
 }
-button {
-    margin-top: 1.4rem;
-}
 input[type="radio"] + label,
 input[type="checkbox"] + label {
     margin-left: .6rem;
 }
 footer p {
     margin-top: 0;
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
 }
 input[id],
 button,
 textarea,
 select{
     width:100%;
-    height:2.1rem;
+    height:2.2rem;
     border: none;
     background-color: rgba(211, 211, 211, 0.356);
-    border-radius: 5px;
+    border-radius: 4px;
+    padding-left: 1rem;
+}
+select {
+    height:2.6rem;
+}
+button {
+    margin-top: 1.4rem;
+    height:3rem;
+    color:white;
+    background-color: rgb(84, 187, 182);
+    font-weight: 500;
+    font-size: 1rem;
 }
 input[name="zip_code"] {
     width:50%;
 }
 textarea {
-    height: 4.5rem;
+    height: 4.7rem;
+    padding-top: 1rem;
 }
-
-
-
-
-
-
-
-
-
+input:focus,
+select:focus,
+textarea:focus {
+    border:2px solid rgb(17, 17, 163);
+}
 
 fieldset {
     padding-bottom:1.2rem;
 }
 fieldset:first-child {
     border-bottom: 2px solid black;
+}
+
+@media (min-width:769px) {
+    .info-container,
+    main,
+    footer {
+        width:50%;
+    }
+    .form-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .form-container> input,
+    select {
+        width: 72%;
+        margin: .7rem 0;
+    
+    }
+    .form-container> label:not([for="zip"]) {
+        width:20%;
+        margin-right:auto;
+        padding-top: .62rem; 
+    }
+    input[name="zip_code"] {
+        margin-right:auto;
+        width:26%;
+    }
+    label[for="zip"] {
+        width:20%;
+        padding-top: .62rem; 
+        margin-right: 8%;
+    }
+    label,
+    form p {
+        color:rgba(39, 38, 38, 0.61);
+        
+    }
+    .info-container p {
+        color:rgba(63, 62, 62, 0.404);
+    }
 }
