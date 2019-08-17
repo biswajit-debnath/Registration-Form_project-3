@@ -23,10 +23,10 @@
                 <legend><h2>Contact Information</h2></legend>
                 <div class="form-container">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="full_name" placeholder="Required">
+                    <input type="text" id="name" name="full_name" placeholder="Required" required>
 
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Required">
+                    <input type="email" id="email" name="email" placeholder="Required" required>
 
                     <label for="phno">Phone Number</label>
                     <input type="telephone" id="phno" name="phone_number">
@@ -38,7 +38,8 @@
                     <input type="text" id="city" name="city_name">
 
                     <label>State</label>
-                    <select placeholder="Choose State">
+                    <select>
+                        <option value="" selected diabled>Choose State</option>
                         <option value="panjab">Panjab</option>
                         <option value="karnataka">Karnataka</option>
                         <option value="assam">Assam</option>
